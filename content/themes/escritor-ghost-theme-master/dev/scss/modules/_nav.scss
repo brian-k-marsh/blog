@@ -1,0 +1,199 @@
+// ==================================================
+// Variables
+// ==================================================
+
+.menu-toggle {
+    display: block;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    border-radius: 3px;
+    @include z-index("menuToggle");
+    font-family: $sans-serif;
+    color: #FFF;
+    text-transform: uppercase;
+
+    color: #000;
+    background: #FFF;
+    padding: 10px 14px 4px 10px;
+    box-shadow: 0 0px 1px 0px rgba(80, 80, 80, 0.8);
+
+
+
+    .nav--opened & {
+        background: none;
+        box-shadow: none;
+        color: #FFF;
+
+        &:hover {
+            color: $gold-hover;
+        }
+    }
+
+    @include respond-to(small) {
+        top: 20px;
+        right: 20px;
+    }
+
+
+}
+    .menu-word {
+        position: relative;
+        bottom: 4px;
+        left: 4px;
+        font-size: 2rem
+    }
+
+
+
+.bars {
+    display: inline-block;
+}
+    .bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        margin-bottom: 4px;
+        transition: all 150ms ease;
+
+        .menu-toggle:hover & {
+            background: $gold-hover;
+        }
+
+        .nav--opened & {
+            background: #FFF;
+        }
+    }
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background: url('../img/black_paper.png');
+    margin-bottom: 0;
+    text-align: left;
+    color: #FFF;
+    font-family: $sans-serif;
+    overflow-y: auto;
+    transition: all 150ms ease;
+    transform: translate3d(10%, 0, 0);
+
+    overflow-y: auto;
+
+    @include z-index("nav");
+
+    a {
+        display: block;
+        color: #e1e1e1;
+
+        &:hover {
+            color: #FFF;
+        }
+    }
+
+
+    .nav--opened & {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include respond-to(small) {
+        width: 300px;
+    }
+    @include respond-to(medium) {
+        box-shadow: 3px 0 3px 3px #000;
+    }
+
+}
+    .nav__title {
+        padding: 20px;
+        @include font-size($h4-font-sizes);
+        color: #FFF;
+        font-weight: 100;
+    }
+    .nav__link {
+        padding: 10px 20px;
+
+        &:after {
+            content: ' ';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #333;
+            margin: 10px 0;
+            transition: all 150ms ease;
+        }
+
+
+        &:hover {
+
+
+            &:after {
+                background: #FFF;
+            }
+        }
+
+    }
+
+
+
+
+
+.recent-articles {
+    
+}
+    .recent-articles__title {
+        @extend .nav__title;
+        font-weight: 100;
+    }
+    .recent-articles__content {
+        padding: 0 20px 20px 20px;
+    }
+    .recent-articles__item {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    .recent-articles__post {
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: #E1E1E1;
+
+        &:hover {
+            color: #FFF;
+        }
+    }
+    .date {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        color: #BBB;
+    }
+
+
+
+.subscribe {
+    text-align: center;
+}
+    .nav .subscribe-button {
+        display: inline-block;
+        border: 1px solid #E1E1E1;
+        padding: 10px 20px;
+        border-radius: 15px;
+
+        &:hover {
+            border: 1px solid #FFF;
+        }
+    }
+
+.post__content {
+    .recent-articles__post {
+        color: #000;
+    }
+}

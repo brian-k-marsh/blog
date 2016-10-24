@@ -1,0 +1,68 @@
+// ==================================================
+// Header
+// ==================================================
+
+
+.site-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  min-height: 35vh;
+  text-align: center;
+  background: #222 no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.site-header__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.site-header__cell {
+  display: table-cell;
+  vertical-align: middle;
+
+}
+.site-header__info {
+    position: relative;
+    @include z-index("headerInfo");
+}
+
+.no-cover {
+  min-height: 160px;
+  max-height: 40vh;
+  background: #F5F8FA;
+}
+
+
+
+.blog-logo-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  padding: 2px;
+
+  &:hover {
+    border: 1px solid #D1C8B8;
+  }
+
+}
+
+.page-header {
+
+}
+
+.site-header__title {
+  color: #FFF;
+  margin-bottom: 10px;
+}
+.site-header__description {
+  color: #FFF;
+}

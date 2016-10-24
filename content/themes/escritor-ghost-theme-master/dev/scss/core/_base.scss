@@ -1,0 +1,48 @@
+// ==================================================
+// Base
+// ==================================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  transition: all 150ms ease;
+  color: #BDB099;
+
+  &:hover {
+    color: lighten(#BDB099, 10%);
+  }
+}
+
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: 10px;
+  line-height: 1;
+  font-family: $sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+pre {
+  font-size: 1.5rem;
+}
+
